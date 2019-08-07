@@ -15,8 +15,8 @@ RUN set -x && \
     pip install opencv-contrib-python && \
     pip install absl-py && \
     pip install xlrd && \
-    pip install tensorboard=1.14.0 && \
-    pip install fastai=1.0.55 && \
+    pip install tensorboard==1.14.0 && \
+    pip install fastai==1.0.55 && \
     pip install tqdm==4.32.1 && \
     pip install scipy==1.2.1 && \
     pip install scikit-image==0.15.0 && \
