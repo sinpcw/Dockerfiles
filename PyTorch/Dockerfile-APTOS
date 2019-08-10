@@ -11,7 +11,7 @@ RUN set -x && \
     apt-get install -y zip && \
     git clone https://github.com/NVIDIA/apex
     cd apex
-    pip install -v -no-cache-dir ./
+    pip install -v --no-cache-dir ./
     cd ../
     pip install --upgrade pip && \
     pip install pillow && \
