@@ -24,4 +24,5 @@ RUN set -x && \
     pip install xlrd && \
     pip install pandas && \
     pip install matplotlib && \
-    pip install -U catalyst
+    pip install catalyst[all] && \
+    pip install albumentations
