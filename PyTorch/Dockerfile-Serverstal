@@ -25,4 +25,5 @@ RUN set -x && \
     pip install pandas && \
     pip install matplotlib && \
     pip install catalyst[all] && \
-    pip install albumentations
+    pip install -U git+https://github.com/albu/albumentations
+
