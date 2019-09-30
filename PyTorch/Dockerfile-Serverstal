@@ -26,5 +26,5 @@ RUN set -x && \
     pip install matplotlib && \
     pip install catalyst[all] && \
     pip install -U git+https://github.com/albu/albumentations && \
-    pip install efficientnet_pytorch
-
+    pip install efficientnet_pytorch && \
+    pip install pretrainedmodels
