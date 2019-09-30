@@ -30,5 +30,5 @@ RUN set -x && \
     git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
-    cd ..\ && \
+    cd ../ && \
     pip install git+https://github.com/qubvel/segmentation_models.pytorch
