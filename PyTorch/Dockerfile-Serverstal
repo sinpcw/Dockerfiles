@@ -27,4 +27,7 @@ RUN set -x && \
     pip install catalyst[all] && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install efficientnet_pytorch && \
-    pip install pretrainedmodels
+    git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
+    cd pretrained-models.pytorch && \
+    python setup.py install && \
+    cd ..\
