@@ -1,8 +1,8 @@
-FROM pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-runtime
+FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime
 MAINTAINER SiNpcw
 
 # Command
-CMD ["echo", "PyTorch-1.1.0 Customized"]
+CMD ["echo", "PyTorch-1.2 Customized"]
 
 RUN set -x && \
     apt-get update && \
