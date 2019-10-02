@@ -6,9 +6,7 @@ CMD ["echo", "PyTorch-1.2 Customized"]
 
 RUN set -x && \
     apt-get update && \
-    apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 && \
-    apt-get install -y vim-common && \
-    apt-get install -y zip && \
+    apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 vim-common zip gcc && \
     git clone https://github.com/NVIDIA/apex && \
     cd apex && \
     pip install -v --no-cache-dir ./ && \
@@ -31,4 +29,7 @@ RUN set -x && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
     cd ../ && \
-    pip install git+https://github.com/qubvel/segmentation_models.pytorch
+    pip install git+https://github.com/qubvel/segmentation_models.pytorch && \
+    git clone https://github.com/jfzhang95/pytorch-deeplab-xception.git
+
+ENV PYTHONPATH /workspace/pytorch-deeplab-xception/
