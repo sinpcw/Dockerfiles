@@ -5,8 +5,6 @@ CMD ["echo", "PyTorch-1.2 Customized"]
 
 WORKDIR /workspace/
 
-ENV CUDA_HOME=/usr/local/cuda
-
 RUN set -x && \
     apt-get update && \
     apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 vim-common zip build-essential && \
@@ -28,6 +26,7 @@ RUN set -x && \
     pip install catalyst[all] && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install efficientnet_pytorch && \
+    pip install -U tensorboard && \
     git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
