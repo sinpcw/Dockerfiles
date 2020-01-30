@@ -32,4 +32,6 @@ RUN set -x && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
     cd ../ && \
-    pip install git+https://github.com/qubvel/segmentation_models.pytorch
+    pip install git+https://github.com/qubvel/segmentation_models.pytorch && \
+    pip install reformer_pytorch
+
