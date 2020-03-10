@@ -14,7 +14,7 @@ RUN set -x && \
     pip install -v --no-cache-dir ./ && \
     cd ../ && \
     pip install --upgrade pip && \
-    pip install pillow && \
+    pip install pillow==6.2.1 && \
     pip install opencv-python && \
     pip install opencv-contrib-python && \
     pip install absl-py && \
@@ -25,13 +25,12 @@ RUN set -x && \
     pip install pandas && \
     pip install matplotlib && \
     pip install -U tensorboard && \
-    pip install catalyst[all] && \
     pip install -U git+https://github.com/albu/albumentations && \
-    pip install efficientnet_pytorch && \
+    pip install -U efficientnet_pytorch && \
     git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
     cd ../ && \
+    pip install catalyst[all] && \
     pip install git+https://github.com/qubvel/segmentation_models.pytorch && \
-    pip install reformer_pytorch
-
+    pip install iterative-stratification
