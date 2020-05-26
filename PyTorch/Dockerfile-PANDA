@@ -1,8 +1,8 @@
-FROM pytorch/pytorch:1.5-cuda10.1-cudnn7-runtime
+FROM pytorch/pytorch:1.4-cuda10.1-cudnn7-runtime
 MAINTAINER SiNpcw
 
 # Command
-CMD ["echo", "PyTorch-1.5 Customized"]
+CMD ["echo", "PyTorch-1.4 Customized"]
 
 RUN set -x && \
     apt-get update && \
@@ -40,4 +40,5 @@ RUN set -x && \
     pip install openslide-python && \
     pip install -U git+https://github.com/Luolc/AdaBound && \
     pip install -U git+https://github.com/LiyuanLucasLiu/RAdam && \
-    pip install -U git+https://github.com/zhanghang1989/ResNeSt
+    pip install -U git+https://github.com/zhanghang1989/ResNeSt && \
+    pip install -U neptune-client
