@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.5-cuda10.1-cudnn7-runtime
+FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-devel
 MAINTAINER SiNpcw
 
 # Command
@@ -6,14 +6,11 @@ CMD ["echo", "PyTorch-1.5 Customized"]
 
 RUN set -x && \
     apt-get update && \
-    apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 && \
+    apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 zip git build-essential gcc && \
     apt-get install -y vim-common && \
-    apt-get install -y zip git && \
-    apt-get install -y openslide-tools && \
-    apt-get install -y python-openslide && \
     git clone https://github.com/NVIDIA/apex && \
     cd apex && \
-    pip install -v --no-cache-dir ./ && \
+    pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./ && \
     cd ../ && \
     pip install --upgrade pip && \
     pip install pillow && \
@@ -22,7 +19,8 @@ RUN set -x && \
     pip install absl-py && \
     pip install tqdm && \
     pip install scipy && \
-    pip install sklearn && \
+    pip install scikit-learn && \
+    pip install scikit-image && \
     pip install xlrd && \
     pip install pandas && \
     pip install matplotlib && \
@@ -34,10 +32,7 @@ RUN set -x && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
     cd ../ && \
-    pip install catalyst[all] && \
-    pip install git+https://github.com/qubvel/segmentation_models.pytorch && \
-    pip install iterative-stratification && \
-    pip install openslide-python && \
+    pip install timm && \
     pip install -U git+https://github.com/Luolc/AdaBound && \
     pip install -U git+https://github.com/LiyuanLucasLiu/RAdam && \
     pip install -U git+https://github.com/zhanghang1989/ResNeSt
