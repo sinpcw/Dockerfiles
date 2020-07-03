@@ -14,18 +14,21 @@ RUN set -x && \
     pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./ && \
     cd ../ && \
     pip install --upgrade pip && \
-    pip install pillow && \
-    pip install opencv-python && \
-    pip install opencv-contrib-python && \
+    pip install cython && \
     pip install absl-py && \
     pip install tqdm && \
-    pip install scipy && \
-    pip install scikit-learn && \
-    pip install scikit-image && \
     pip install xlrd && \
     pip install pandas && \
     pip install matplotlib && \
     pip install numba && \
+    pip install pillow && \
+    pip install opencv-python && \
+    pip install opencv-contrib-python && \
+    pip install imagecodecs && \
+    pip install tifffile && \
+    pip install scipy && \
+    pip install scikit-learn && \
+    pip install scikit-image && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install -U efficientnet_pytorch && \
