@@ -1,17 +1,12 @@
-FROM pytorch/pytorch:1.5.1-cuda10.1-cudnn7-devel
-MAINTAINER SiNpcw
+FROM pytorch/pytorch:1.6.0-cuda10.1-cudnn7-devel
 
 # Command
-CMD ["echo", "PyTorch-1.5 Customized"]
+CMD ["echo", "PyTorch-1.6"]
 
 RUN set -x && \
     apt-get update && \
     apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 zip git build-essential gcc && \
     apt-get install -y vim-common && \
-    git clone https://github.com/NVIDIA/apex && \
-    cd apex && \
-    pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./ && \
-    cd ../ && \
     pip install --upgrade pip && \
     pip install pillow && \
     pip install opencv-python && \
