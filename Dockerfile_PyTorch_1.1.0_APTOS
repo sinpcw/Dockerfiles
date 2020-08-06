@@ -1,8 +1,6 @@
 FROM pytorch/pytorch:1.1.0-cuda10.0-cudnn7.5-runtime
-MAINTAINER SiNpcw
 
-# Command
-CMD ["echo", "PyTorch-1.1.0 Customized for Kaggle APTOS 2019"]
+CMD ["echo", "PyTorch-1.1.0 for APTOS 2019"]
 
 RUN set -x && \
     apt-get update && \

@@ -1,7 +1,6 @@
 FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime
-MAINTAINER SiNpcw
 
-CMD ["echo", "PyTorch-1.2 Customized"]
+CMD ["echo", "PyTorch-1.2.0 for Severstal"]
 
 WORKDIR /workspace/
 
