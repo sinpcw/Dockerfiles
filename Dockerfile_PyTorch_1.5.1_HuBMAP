@@ -6,6 +6,7 @@ RUN set -x && \
     apt-get install -y vim-common && \
     apt-get install -y zip p7zip-full git && \
     apt-get install -y openslide-tools && \
+    apt-get install -y --fix-missing libvips libvips-dev && \
     git clone https://github.com/NVIDIA/apex && \
     cd apex && \
     pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./ && \
@@ -25,6 +26,7 @@ RUN set -x && \
     pip install matplotlib && \
     pip install numba && \
     pip install tifffile && \
+    pip install pyvips && \
     pip install openslide-python && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
