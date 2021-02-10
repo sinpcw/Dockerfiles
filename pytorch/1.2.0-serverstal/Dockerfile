@@ -1,7 +1,5 @@
 FROM pytorch/pytorch:1.2-cuda10.0-cudnn7-runtime
 
-CMD ["echo", "PyTorch-1.2.0 for Severstal"]
-
 WORKDIR /workspace/
 
 ENV CUDA_HOME=/usr/local/cuda

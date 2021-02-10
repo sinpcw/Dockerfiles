@@ -1,7 +1,5 @@
 FROM pytorch/pytorch:1.3-cuda10.1-cudnn7-runtime
 
-CMD ["echo", "PyTorch-1.3.0 for Cloud"]
-
 WORKDIR /workspace/
 
 RUN set -x && \
