@@ -8,7 +8,6 @@ RUN set -x && \
     apt-get install -y git build-essential gcc vim-common && \
     apt-get install -y zip p7zip-full git libopencv-dev && \
     apt-get install -y python-openslide openslide-tools && \
-    apt-get install -y libsndfile-dev && \
     apt-get update && \
     apt-get install -y python-numpy gdal-bin libgdal-dev && \
     pip install --upgrade pip && \
@@ -32,13 +31,9 @@ RUN set -x && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install -U efficientnet_pytorch && \
+    pip install -U git+https://github.com/qubvel/segmentation_models.pytorch && \
     git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
     cd pretrained-models.pytorch && \
     python setup.py install && \
     cd ../ && \
-    pip install git+https://github.com/rwightman/pytorch-image-models.git && \
-    pip install torchaudio && \
-    pip install torchlibrosa && \
-    pip install soundfile && \
-    pip install sndfile && \
-    pip install nnAudio
+    pip install git+https://github.com/rwightman/pytorch-image-models.git
