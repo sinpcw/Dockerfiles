@@ -11,6 +11,7 @@ RUN set -x && \
     apt-get update && \
     apt-get install -y python-numpy gdal-bin libgdal-dev && \
     pip install --upgrade pip && \
+    pip install ipywidgets && \
     pip install pillow && \
     pip install opencv-python && \
     pip install imagecodecs && \
@@ -30,9 +31,6 @@ RUN set -x && \
     pip install pycocotools && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
-    pip install -U efficientnet_pytorch && \
-    git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
-    cd pretrained-models.pytorch && \
-    python setup.py install && \
-    cd ../ && \
     pip install git+https://github.com/rwightman/pytorch-image-models.git
+    pip install librosa && \
+    pip install SoundFile

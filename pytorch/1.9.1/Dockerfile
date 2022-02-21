@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel
+FROM pytorch/pytorch:1.9.1-cuda11.1-cudnn8-devel
 
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -31,6 +31,6 @@ RUN set -x && \
     pip install pycocotools && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
-    pip install git+https://github.com/rwightman/pytorch-image-models.git && \
+    pip install git+https://github.com/rwightman/pytorch-image-models.git
     pip install librosa && \
     pip install SoundFile
