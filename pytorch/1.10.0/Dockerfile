@@ -33,4 +33,6 @@ RUN set -x && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install git+https://github.com/rwightman/pytorch-image-models.git && \
     pip install librosa && \
-    pip install SoundFile
+    pip install SoundFile && \
+    pip install lap && \
+    pip install imagehash
