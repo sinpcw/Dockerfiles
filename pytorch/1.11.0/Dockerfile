@@ -37,7 +37,7 @@ RUN set -x && \
     pip install lap && \
     pip install imagehash && \
     pip install pytorch_metric_learning && \
-    pip install fastdist &&
-    pip install ftfy &&
-    pip install regex &&
+    pip install fastdist && \
+    pip install ftfy && \
+    pip install regex && \
     pip install git+https://github.com/openai/CLIP.git
