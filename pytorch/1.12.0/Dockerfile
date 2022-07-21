@@ -1,9 +1,8 @@
-FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-devel
+FROM pytorch/pytorch:1.12.0-cuda11.3-cudnn8-devel
 
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN set -x && \
-    apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/3bf863cc.pub && \
     apt-get update && \
     apt-get install -y libglib2.0-0 libsm6 libxext6 libxrender1 libfontconfig1 libgl1-mesa-dev && \
     apt-get install -y git build-essential gcc vim-common && \
