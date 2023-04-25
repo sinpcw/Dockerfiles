@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:1.9.0-cuda11.1-cudnn8-devel
+FROM pytorch/pytorch:2.0.0-cuda11.7-cudnn8-devel
 
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -8,10 +8,11 @@ RUN set -x && \
     apt-get install -y git build-essential gcc vim-common && \
     apt-get install -y zip p7zip-full git libopencv-dev && \
     apt-get install -y python-openslide openslide-tools && \
-    apt-get install -y libsndfile-dev && \
     apt-get update && \
     apt-get install -y python-numpy gdal-bin libgdal-dev && \
+    apt-get install -y openssh-server && \
     pip install --upgrade pip && \
+    pip install ipywidgets && \
     pip install pillow && \
     pip install opencv-python && \
     pip install imagecodecs && \
@@ -22,24 +23,25 @@ RUN set -x && \
     pip install scikit-image && \
     pip install xlrd && \
     pip install pandas && \
+    pip install pyarrow && \
+    pip install polars && \
     pip install matplotlib && \
     pip install numba && \
     pip install tifffile && \
     pip install rasterio && \
     pip install openslide-python && \
+    pip install pydicom pyvips && \
     pip install h5py && \
     pip install pycocotools && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
-    pip install -U efficientnet_pytorch && \
-    git clone https://github.com/Cadene/pretrained-models.pytorch.git && \
-    cd pretrained-models.pytorch && \
-    python setup.py install && \
-    cd ../ && \
     pip install git+https://github.com/rwightman/pytorch-image-models.git && \
-    pip install torchaudio && \
-    pip install torchlibrosa && \
-    pip install soundfile && \
-    pip install sndfile && \
-    pip install nnAudio
-
+    pip install librosa && \
+    pip install SoundFile && \
+    pip install lap && \
+    pip install imagehash && \
+    pip install pytorch_metric_learning && \
+    pip install fastdist && \
+    pip install ftfy && \
+    pip install regex && \
+    pip install git+https://github.com/openai/CLIP.git

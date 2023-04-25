@@ -25,6 +25,9 @@ RUN set -x && \
     pip install pandas && \
     pip install matplotlib && \
     pip install numba && \
+    pip install tifffile && \
+    pip install pyvips && \
+    pip install openslide-python && \
     pip install -U tensorboard && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install -U efficientnet_pytorch && \
