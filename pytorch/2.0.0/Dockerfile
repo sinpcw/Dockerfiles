@@ -26,6 +26,7 @@ RUN set -x && \
     pip install pyarrow && \
     pip install polars && \
     pip install matplotlib && \
+    pip install seaborn && \
     pip install numba && \
     pip install tifffile && \
     pip install rasterio && \
@@ -44,4 +45,6 @@ RUN set -x && \
     pip install fastdist && \
     pip install ftfy && \
     pip install regex && \
-    pip install git+https://github.com/openai/CLIP.git
+    pip install git+https://github.com/openai/CLIP.git && \
+    pip install pip install open-clip-torch && \
+    pip install accelerate

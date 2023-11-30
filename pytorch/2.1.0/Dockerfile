@@ -27,6 +27,7 @@ RUN set -x && \
     pip install polars && \
     pip install matplotlib && \
     pip install japanize-matplotlib && \
+    pip install seaborn && \
     pip install numba && \
     pip install tifffile && \
     pip install rasterio && \
@@ -46,4 +47,5 @@ RUN set -x && \
     pip install ftfy && \
     pip install regex && \
     pip install git+https://github.com/openai/CLIP.git && \
-    pip install open_clip_torch
+    pip install open_clip_torch && \
+    pip install accelerate
