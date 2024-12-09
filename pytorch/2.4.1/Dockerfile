@@ -1,4 +1,4 @@
-FROM pytorch/pytorch:2.3.1-cuda12.1-cudnn8-devel
+FROM pytorch/pytorch:2.4.1-cuda12.1-cudnn9-devel
 
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -36,6 +36,7 @@ RUN set -x && \
     pip install h5py && \
     pip install pycocotools && \
     pip install -U tensorboard && \
+    pip install git+https://github.com/qubvel/segmentation_models.pytorch && \
     pip install -U git+https://github.com/albu/albumentations && \
     pip install git+https://github.com/rwightman/pytorch-image-models.git && \
     pip install librosa && \
@@ -48,6 +49,7 @@ RUN set -x && \
     pip install regex && \
     pip install git+https://github.com/openai/CLIP.git && \
     pip install open_clip_torch && \
-    pip install accelerate
+    pip install accelerate && \
+    pip install openai huggingface_hub
 
 ENTRYPOINT [ "/bin/bash" ]
